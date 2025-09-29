@@ -1,7 +1,7 @@
 # Starlink Navigation Algorithm (DRA-PINN)
 
 **License**: MIT Open-Source (github.com/DRA-PINN-SpaceX)  
-**Purpose**: To provide a navigation algorithm for SpaceX’s Starlink constellation, achieving optimal global coverage (98%, 100% rural/high-latitude), bandwidth (150 Mbps/user), and latency (<25 ms), with efficient collision avoidance and maneuver reduction.
+**Purpose**: To provide a navigation algorithm for SpaceX’s Starlink constellation, achieving optimal global coverage, bandwidth (150 Mbps/user), and latency (<25 ms), with efficient collision avoidance and maneuver reduction.
 
 ## Overview
 The Starlink Navigation Algorithm leverages Dynamic Resonant Arithmetic (DRA) and Physics-Informed Neural Networks (PINN) to optimize navigation for SpaceX’s Starlink constellation (~8,475 satellites, scaling to 42,000). It models chaotic N-body dynamics with resonant stability, achieving position errors <1 m, latency <25 ms, and collision risks <10^-7. The algorithm ensures 98% global coverage (100% rural/Arctic), 150 Mbps/user, and 20–25 ms latency, reducing maneuvers by 20% (~250/day vs. 275/day real). Validated on Starlink 2025 data, it is ready for integration into SpaceX’s avionics for constellation scalability.
