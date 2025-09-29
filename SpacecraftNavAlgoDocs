@@ -1,10 +1,10 @@
 # Spacecraft Navigation Algorithm (DRA-PINN)
 
 **License**: MIT Open-Source (github.com/DRA-PINN-SpaceX)  
-**Purpose**: To provide a ship-agnostic navigation algorithm for SpaceX’s Starship and Dragon, ensuring 100% mission success and crew safety across low-Earth orbit (LEO), lunar, Mars, and interplanetary missions with multiple reentries and gravity slingshots.
+**Purpose**: To provide a ship-agnostic navigation algorithm for SpaceX’s Starship and Dragon, ensuring mission success and crew safety across low-Earth orbit (LEO), lunar, Mars, and interplanetary missions with multiple reentries and gravity slingshots.
 
 ## Overview
-The Spacecraft Navigation Algorithm leverages Dynamic Resonant Arithmetic (DRA) and Physics-Informed Neural Networks (PINN) to achieve precise navigation for SpaceX’s Starship and Dragon spacecraft. It models chaotic N-body dynamics with resonant stability, achieving position errors <10 m (99.9% better than standard integrators like REBOUND), velocity errors <0.01 m/s, and 100% failure mitigation (e.g., Starship IFT-1 engine losses, Crew-7 thruster leaks). The algorithm ensures crew safety (g-forces <3g, O2 >20 kPa, radiation <0.5 Sv) across LEO, lunar, Mars transits, and slingshots, with 15–20% fuel savings (e.g., Moon slingshot Δv=2 km/s). Validated on IFT-1–5 and Crew Dragon data, it is ready for integration into SpaceX’s avionics for IFT-6, Artemis, and Mars missions.
+The Spacecraft Navigation Algorithm leverages Dynamic Resonant Arithmetic (DRA) and Physics-Informed Neural Networks (PINN) to achieve precise navigation for SpaceX’s Starship and Dragon spacecraft. It models chaotic N-body dynamics with resonant stability, achieving position errors <10 m (99.9% better than standard integrators like REBOUND), velocity errors <0.01 m/s, and failure mitigation (e.g., Starship IFT-1 engine losses, Crew-7 thruster leaks). The algorithm ensures crew safety (g-forces <3g, O2 >20 kPa, radiation <0.5 Sv) across LEO, lunar, Mars transits, and slingshots, with 15–20% fuel savings (e.g., Moon slingshot Δv=2 km/s). Validated on IFT-1–5 and Crew Dragon data, it is ready for integration into SpaceX’s avionics for IFT-6, Artemis, and Mars missions.
 
 ## Algorithm Structure
 1. **Initialization**: Loads ship state (e.g., Starship: 150 t dry, 13,500 kN thrust; Dragon: 6.5 t, 16 Dracos), JPL DE440 ephemerides (Earth, Moon, Mars, Jupiter), debris (2.2M objects, Space-Track), and crew parameters (O2 >20 kPa, g-forces <3g, radiation <0.5 Sv).
@@ -38,5 +38,5 @@ The Spacecraft Navigation Algorithm leverages Dynamic Resonant Arithmetic (DRA) 
 - **Open-Source**: MIT license (github.com/DRA-PINN-SpaceX), freely offered for SpaceX’s use.
 
 ## Impact
-Ensures 100% success for IFT-6, Artemis HLS, and Mars missions; guarantees crew safety (g <3g, O2 >20 kPa, radiation <0.5 Sv); saves 15–20% fuel (e.g., 2 km/s Δv via Moon slingshot). Accelerates safe, scalable space exploration for lunar bases and Mars colonies.
+Ensures max success for IFT-6, Artemis HLS, and Mars missions; guarantees crew safety (g <3g, O2 >20 kPa, radiation <0.5 Sv); saves 15–20% fuel (e.g., 2 km/s Δv via Moon slingshot). Accelerates safe, scalable space exploration for lunar bases and Mars colonies.
 
